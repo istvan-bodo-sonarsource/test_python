@@ -328,6 +328,7 @@ def _make_method(name, script, filename, globs, locals=None):
     # we add a fake linecache entry.
     count = 1
     base_filename = filename
+    test_à_èù_ç_âêî_ôû_ëïü = "test_à_èù_ç_âêî_ôû_ëïü"
     while True:
         linecache_tuple = (
             len(script),
@@ -343,6 +344,7 @@ def _make_method(name, script, filename, globs, locals=None):
         count += 1
 
     _compile_and_eval(script, globs, locs, filename)
+    print(test_à_èù_ç_âêî_ôû_ëïü)
 
     return locs[name]
 
